@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1280px, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/prism/prism-dark.css" />
+    <title>CSS Component Library</title>
+  </head>
+  <body>
+    <h1>CSS Component Library</h1>
+
+    <h2>Plain Code</h2>
+    <pre><code class="language-css">p { color: red }</code></pre>
+
+    <h2>Line Numbering</h2>
+    <pre><code class="language-html line-numbers">&lt;pre&gt;&lt;code class="language-html line-numbers"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+    <strong>Note: </strong> If you want the whole page to be highlighted, then
+    use
+    <code class="language-html">&lt;body class="line-numbers"&gt;</code> tag.
+
+    <h2>Line Highlighting</h2>
+    <pre data-line="2"><code class="language-javascript">
+      const addNumbers = (a,b) => {
+        const result = a + b;
+        return result;
+      }
+    </code></pre>
+    <strong>Note: </strong> Use
+    <code class="language-html">&lt;pre data-line="2"&gt;</code> tag to
+    highlight line number 2. Other variations are
+    <ul>
+      <li><strong>1-5:</strong> Lines 1 through 5</li>
+      <li><strong>1,4 :</strong> Line 1 and line 4</li>
+      <li>
+        <strong>1-2, 5, 9-20:</strong> Lines 1 through 2, line 5, lines 9
+        through 20
+      </li>
+    </ul>
+
+    <h2>Copy Button</h2>
+    <pre><code class="language-html line-numbers">&lt;pre&gt;&lt;code class="language-html line-numbers"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;</code></pre>
+  </body>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/prism/prism-dark.js"></script>
+</html>
