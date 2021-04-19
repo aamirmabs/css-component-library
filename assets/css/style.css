@@ -1,3 +1,117 @@
 body {
   background-color: aliceblue;
+  margin: 0px;
+}
+
+.layout-controller {
+  display: grid;
+  gap: 2px 2px;
+}
+
+.header {
+  background-color: aliceblue;
+  grid-area: header;
+}
+
+.component-menu-button-mobile {
+  background-color: rgb(219, 219, 219);
+  grid-area: component-menu-button-mobile;
+}
+
+.component-menu-mobile {
+  background-color: rgb(170, 170, 170);
+  grid-area: component-menu-mobile;
+}
+
+.component-menu-desktop {
+  background-color: rgb(216, 237, 255);
+  grid-area: component-menu-desktop;
+}
+
+.content {
+  background-color: rgb(205, 232, 255);
+  grid-area: content;
+}
+
+.footer {
+  background-color: rgb(176, 218, 255);
+  grid-area: footer;
+}
+
+/* mobile portrait */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .layout-controller {
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:
+      "header component-menu-button-mobile"
+      "component-menu-mobile component-menu-mobile"
+      "content content"
+      "footer footer";
+  }
+
+  .component-menu-desktop {
+    display: none;
+  }
+}
+
+/* mobile landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .layout-controller {
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:
+      "header component-menu-button-mobile"
+      "component-menu-mobile component-menu-mobile"
+      "content content"
+      "footer footer";
+  }
+
+  .component-menu-desktop {
+    display: none;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .layout-controller {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+      "header header header"
+      "component-menu-desktop content content"
+      "footer footer footer";
+  }
+
+  .component-menu-button-mobile {
+    display: none;
+  }
+
+  .component-menu-mobile {
+    display: none;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 980px) {
+  .layout-controller {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+      "header header header header"
+      "component-menu-desktop content content content"
+      "footer footer footer footer";
+  }
+
+  .component-menu-button-mobile {
+    display: none;
+  }
+
+  .component-menu-mobile {
+    display: none;
+  }
 }
