@@ -3,6 +3,7 @@ body {
   margin: 0px;
 }
 
+/* SETTING UP THE GRID */
 .layout-controller {
   display: grid;
   gap: 2px 2px;
@@ -43,7 +44,6 @@ body {
   .layout-controller {
     grid-template-columns: 1fr 3rem;
     grid-template-rows: repeat(4, auto);
-
     grid-template-areas:
       "header component-menu-button-mobile"
       "component-menu-mobile component-menu-mobile"
@@ -61,7 +61,6 @@ body {
   .layout-controller {
     grid-template-columns: 1fr 3rem;
     grid-template-rows: repeat(4, auto);
-
     grid-template-areas:
       "header component-menu-button-mobile"
       "component-menu-mobile component-menu-mobile"
@@ -79,7 +78,6 @@ body {
   .layout-controller {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-
     grid-template-areas:
       "header header header"
       "component-menu-desktop content content"
@@ -114,4 +112,60 @@ body {
   .component-menu-mobile {
     display: none;
   }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+
+  background-color: rgb(204, 204, 204);
+}
+
+.header-logo {
+  padding: 0.25rem;
+
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.header-menu {
+  padding: 0.25rem;
+
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.header-menu-list {
+  color: inherit;
+
+  margin: 0.5rem 0rem;
+}
+
+.header-menu-list-item {
+  display: inline;
+}
+
+.header-menu-list-item a {
+  color: purple;
+  padding: 0rem 0.5rem;
+
+  transition: ease-in-out 500ms;
+}
+
+.header-menu-list-item a:hover {
+  color: red;
+
+  transition: ease-in-out 500ms;
 }
