@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1280px, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/prism.css" />
+    <link rel="stylesheet" href="./assets/prism/prism-light.css" />
     <title>CSS Component Library</title>
   </head>
   <body>
     <div class="layout-controller">
+      <!-- HEADER Logo + Menu -->
       <div class="header">
         <div class="header-logo">Logo</div>
 
+        <!-- START Header/Main menu -->
         <div class="header-menu">
           <ul class="header-menu-list">
             <li class="header-menu-list-item"><a href="#">Docs</a></li>
             <li class="header-menu-list-item"><a href="#">Connect</a></li>
           </ul>
         </div>
+        <!-- END Header/Main menu -->
       </div>
+
+      <!-- START Hamburger icon -->
       <div class="component-menu-button-mobile">
         <button id="hamburger-menu-button" aria-label="Main Menu">
           <svg width="100%" height="100%" viewBox="0 0 100 100">
@@ -35,12 +40,37 @@
           </svg>
         </button>
       </div>
+      <!-- END Hamburger icon -->
+
+      <!-- START Mobile Menu -->
       <div class="component-menu-mobile" id="component-menu-mobile-id">
         component-menu-mobile
       </div>
-      <div class="component-menu-desktop">component-menu-desktop</div>
+      <!-- END Mobile Menu -->
+
+      <!-- START Desktop Menu -->
+      <div class="component-menu-desktop">
+        <ul class="desktop-main-menu-start">
+          <li>
+            <span class="desktop-main-menu-item">Typography</span>
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">Headings</li>
+              <li class="desktop-sub-menu-item">Leading Text</li>
+              <li class="desktop-sub-menu-item">Alignment</li>
+              <li class="desktop-sub-menu-item">Lists</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- END Mobile Menu -->
+
+      <!-- START Page Content -->
       <div class="content">Content</div>
+      <!-- END Page Content -->
+
+      <!-- START Footer -->
       <div class="footer">Footer</div>
+      <!-- END Footer -->
     </div>
   </body>
   <script src="./assets/js/script.js"></script>

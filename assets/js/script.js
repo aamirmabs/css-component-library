@@ -47,7 +47,6 @@ window.addEventListener("resize", setHeaderMenuVisibility);
 window.onload = setHeaderMenuVisibilityOnLoad;
 
 // hamburger menu controller
-
 const hanburgerMenuController = (e) => {
   hamburgerMenuButton.classList.toggle("opened");
   hamburgerMenuButton.setAttribute(
@@ -60,3 +59,21 @@ const hanburgerMenuController = (e) => {
 };
 
 hamburgerMenuButton.onclick = hanburgerMenuController;
+
+// component menu accordion functionality
+const toggleSubMenuItems = (e) => {
+  let menuTitle = e.target;
+  let subMenuItems = menuTitle.nextElementSibling;
+
+  subMenuItems.classList.toggle("hidden");
+};
+
+// Array.from() is used as HTML collection value returned by document.getElementsByClassName() is not iterable
+let subMenuItemArray = Array.from(
+  document.getElementsByClassName("desktop-main-menu-item")
+);
+console.log(subMenuItemArray);
+
+subMenuItemArray.forEach((element) => {
+  element.addEventListener("click", toggleSubMenuItems);
+});
