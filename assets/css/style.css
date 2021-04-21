@@ -1,6 +1,15 @@
 body {
   background-color: aliceblue;
   margin: 0px;
+
+  /* body text */
+  font-family: "Roboto Slab", serif;
+
+  /* lead text - cursive */
+  /* font-family: 'Caveat', cursive; */
+
+  /* headings */
+  /* font-family: 'Roboto Mono', monospace; */
 }
 
 /* SETTING UP THE GRID */
@@ -41,86 +50,6 @@ body {
 .footer {
   background-color: rgb(176, 218, 255);
   grid-area: footer;
-}
-
-/* mobile portrait */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  .layout-controller {
-    grid-template-columns: 1fr 3rem;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-      "header component-menu-button-mobile"
-      "component-menu-mobile component-menu-mobile"
-      "content content"
-      "footer footer";
-  }
-
-  .component-menu-desktop {
-    display: none;
-  }
-}
-
-/* mobile landscape */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .layout-controller {
-    grid-template-columns: 1fr 10%;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-      "header component-menu-button-mobile"
-      "component-menu-mobile component-menu-mobile"
-      "content content"
-      "footer footer";
-  }
-
-  .component-menu-desktop {
-    display: none;
-  }
-}
-
-/* tablet */
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .layout-controller {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-      "header header header"
-      "component-menu-desktop content content"
-      "footer footer footer";
-  }
-
-  .component-menu-button-mobile {
-    display: none;
-  }
-
-  .component-menu-mobile {
-    display: none;
-  }
-}
-
-/* desktop */
-@media only screen and (min-width: 980px) {
-  .layout-controller {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-
-    grid-template-areas:
-      "header header header header"
-      "component-menu-desktop content content content"
-      "footer footer footer footer";
-  }
-
-  .header-menu {
-    /* display: block; */
-    color: inherit;
-  }
-
-  .component-menu-button-mobile {
-    display: none;
-  }
-
-  .component-menu-mobile {
-    display: none;
-  }
 }
 
 /* BODY STYLE */
@@ -235,10 +164,208 @@ body {
   stroke-width: 6;
 }
 
+/* CSS RESET + HELPER CLASSES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5rem 0rem;
+
+  /* headings */
+  font-family: "Roboto Mono", monospace;
+}
+
+.section {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid white;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+}
+
+.row {
+  padding: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.column-5 {
+  width: 97%;
+}
+
+.column-4 {
+  width: 77%;
+}
+
+.column-3 {
+  width: 57%;
+}
+
+.column-2 {
+  width: 37%;
+}
+
+.column-1 {
+  width: 17%;
+}
+
 /* COMPONENTS */
 
 /* - Typography */
 
 /* -- Headings */
 
+/* MEDIA QUERIES */
 
+/* mobile portrait */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .layout-controller {
+    grid-template-columns: 1fr 3rem;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header component-menu-button-mobile"
+      "component-menu-mobile component-menu-mobile"
+      "content content"
+      "footer footer";
+  }
+
+  .component-menu-desktop {
+    display: none;
+  }
+
+  .column-5 {
+    width: 97%;
+  }
+
+  .column-4 {
+    width: 97%;
+  }
+
+  .column-3 {
+    width: 97%;
+  }
+
+  .column-2 {
+    width: 97%;
+  }
+
+  .column-1 {
+    width: 97%;
+  }
+}
+
+/* mobile landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .layout-controller {
+    grid-template-columns: 1fr 10%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header component-menu-button-mobile"
+      "component-menu-mobile component-menu-mobile"
+      "content content"
+      "footer footer";
+  }
+
+  .component-menu-desktop {
+    display: none;
+  }
+
+  .column-5 {
+    width: 97%;
+  }
+
+  .column-4 {
+    width: 45%;
+  }
+
+  .column-3 {
+    width: 45%;
+  }
+
+  .column-2 {
+    width: 45%;
+  }
+
+  .column-1 {
+    width: 45%;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .layout-controller {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "header header header"
+      "component-menu-desktop content content"
+      "footer footer footer";
+  }
+
+  .component-menu-button-mobile {
+    display: none;
+  }
+
+  .component-menu-mobile {
+    display: none;
+  }
+
+  .column-5 {
+    width: 97%;
+  }
+
+  .column-4 {
+    width: 57%;
+  }
+
+  .column-3 {
+    width: 45%;
+  }
+
+  .column-2 {
+    width: 45%;
+  }
+
+  .column-1 {
+    width: 37%;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 980px) {
+  .layout-controller {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+      "header header header header"
+      "component-menu-desktop content content content"
+      "footer footer footer footer";
+  }
+
+  .header-menu {
+    /* display: block; */
+    color: inherit;
+  }
+
+  .component-menu-button-mobile {
+    display: none;
+  }
+
+  .component-menu-mobile {
+    display: none;
+  }
+}

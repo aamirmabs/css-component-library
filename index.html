@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1280px, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Reset  -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Prism CSS for syntax highlighting -->
     <link rel="stylesheet" href="./assets/prism/prism-light.css" />
     <title>CSS Component Library</title>
   </head>
@@ -54,6 +68,7 @@
           <li>
             <span class="desktop-main-menu-item">Typography</span>
             <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">Rows + Columns</li>
               <li class="desktop-sub-menu-item">Headings</li>
               <li class="desktop-sub-menu-item">Leading Text</li>
               <li class="desktop-sub-menu-item">Alignment</li>
@@ -137,7 +152,30 @@
       <!-- END Mobile Menu -->
 
       <!-- START Page Content -->
-      <div class="content">Content</div>
+      <div class="content">
+        <div class="section">
+          <div class="row">
+            <div class="column column-3">
+              <h1>Heading</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas nemo vero, sint enim natus quibusdam deserunt delectus
+                incidunt cum quis inventore animi, nisi repellendus facilis
+                repudiandae dolorem nihil, suscipit aut.
+              </p>
+            </div>
+            <div class="column column-2">
+              <h1>Heading</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas nemo vero, sint enim natus quibusdam deserunt delectus
+                incidunt cum quis inventore animi, nisi repellendus facilis
+                repudiandae dolorem nihil, suscipit aut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- END Page Content -->
 
       <!-- START Footer -->
