@@ -12,6 +12,104 @@ body {
   /* font-family: 'Roboto Mono', monospace; */
 }
 
+/* Background transition */
+@-webkit-keyframes bg-transition {
+  0% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 20%,
+      #8e7dff 60%,
+      #00bacf 100%
+    );
+  }
+  25% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 15%,
+      #8e7dff 55%,
+      #00bacf 95%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 10%,
+      #8e7dff 50%,
+      #00bacf 90%
+    );
+  }
+  75% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 5%,
+      #8e7dff 45%,
+      #00bacf 85%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 0%,
+      #8e7dff 40%,
+      #00bacf 80%
+    );
+  }
+}
+@keyframes bg-transition {
+  0% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 20%,
+      #8e7dff 60%,
+      #00bacf 100%
+    );
+  }
+  25% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 15%,
+      #8e7dff 55%,
+      #00bacf 95%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 10%,
+      #8e7dff 50%,
+      #00bacf 90%
+    );
+  }
+  75% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 5%,
+      #8e7dff 45%,
+      #00bacf 85%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to top right,
+      #bc5bcf 0%,
+      #8e7dff 40%,
+      #00bacf 80%
+    );
+  }
+}
+
+.gradient {
+  position: relative;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-name: bg-transition;
+  animation-name: bg-transition;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 /* SETTING UP THE GRID */
 .layout-controller {
   display: grid;
@@ -24,7 +122,7 @@ body {
 }
 
 .component-menu-button-mobile {
-  background-color: rgb(219, 219, 219);
+  background-color: rgba(219, 219, 219, 0.25);
   grid-area: component-menu-button-mobile;
 }
 
@@ -33,22 +131,22 @@ body {
 }
 
 .component-menu-mobile {
-  background-color: rgb(170, 170, 170);
+  background-color: rgba(170, 170, 170, 0.25);
   grid-area: component-menu-mobile;
 }
 
 .component-menu-desktop {
-  background-color: rgb(216, 237, 255);
+  background-color: rgba(216, 237, 255, 0.25);
   grid-area: component-menu-desktop;
 }
 
 .content {
-  background-color: rgb(205, 232, 255);
+  background-color: rgba(205, 232, 255, 0.25);
   grid-area: content;
 }
 
 .footer {
-  background-color: rgb(176, 218, 255);
+  background-color: rgba(176, 218, 255, 0.25);
   grid-area: footer;
 }
 
@@ -71,7 +169,7 @@ body {
   align-items: center;
   align-content: stretch;
 
-  background-color: rgb(204, 204, 204);
+  background-color: rgba(204, 204, 204, 0.25);
 }
 
 .header-logo {
