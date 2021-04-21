@@ -169,7 +169,7 @@ body {
   align-items: center;
   align-content: stretch;
 
-  background-color: rgba(204, 204, 204, 0.25);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .header-logo {
@@ -183,8 +183,13 @@ body {
   order: 0;
 }
 
+.header-logo > img {
+  height: 3rem;
+  padding: 0.25rem 2rem;
+}
+
 .header-menu {
-  padding: 0.25rem;
+  padding: 1rem;
 
   /* display: block; */
   flex-grow: 0;
@@ -202,17 +207,29 @@ body {
 
 .header-menu-list-item {
   display: inline;
+
+  padding: 0rem 1rem;
 }
 
 .header-menu-list-item a {
-  color: purple;
+  color: aliceblue;
   padding: 0rem 0.5rem;
+
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  text-decoration: none;
+
+  transition: ease-in-out 500ms;
+}
+
+.header-menu-list-item a:visited {
+  color: aliceblue;
 
   transition: ease-in-out 500ms;
 }
 
 .header-menu-list-item a:hover {
-  color: red;
+  color: rgb(98, 179, 250);
 
   transition: ease-in-out 500ms;
 }
@@ -275,6 +292,13 @@ h6 {
   font-family: "Roboto Mono", monospace;
 }
 
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
 .section {
   background-color: rgba(255, 255, 255, 0.5);
   border: 3px solid white;
@@ -327,11 +351,10 @@ h6 {
 /* -- Headings */
 
 /* MEDIA QUERIES */
-
 /* mobile portrait */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .layout-controller {
-    grid-template-columns: 1fr 3rem;
+    grid-template-columns: 1fr 4rem;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
       "header component-menu-button-mobile"
@@ -362,13 +385,22 @@ h6 {
 
   .column-1 {
     width: 97%;
+  }
+
+  .header-logo > img {
+    height: 2rem;
+  }
+
+  .header-menu-list-item a {
+    padding: 0rem 0.5rem;
+    font-size: 1.25rem;
   }
 }
 
 /* mobile landscape */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .layout-controller {
-    grid-template-columns: 1fr 10%;
+    grid-template-columns: 1fr 4rem;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
       "header component-menu-button-mobile"
@@ -399,6 +431,15 @@ h6 {
 
   .column-1 {
     width: 45%;
+  }
+
+  .header-logo > img {
+    height: 2rem;
+  }
+
+  .header-menu-list-item a {
+    padding: 0rem 0.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -439,6 +480,15 @@ h6 {
 
   .column-1 {
     width: 37%;
+  }
+
+  .header-logo > img {
+    height: 2rem;
+  }
+
+  .header-menu-list-item a {
+    padding: 0rem 0.5rem;
+    font-size: 1.25rem;
   }
 }
 
