@@ -1,3 +1,83 @@
+/* root colors */
+:root {
+  --primary-light: #c170d1;
+  --primary: #bc5bcf;
+  --primary-dark: #983daa;
+
+  --median-light: #ab9eff;
+  --median: #8e7dff;
+  --median-dark: #6f5fda;
+
+  --secondary-light: #23e3f8;
+  --secondary: #00bacf;
+  --secondary-dark: #0191a1;
+
+  --warning-light: #ffb235;
+  --warning: #f39c12;
+  --warning-dark: #dd8b08;
+
+  --danger-light: #ff4f3b;
+  --danger: #e74c3c;
+  --danger-dark: #c93a2a;
+
+  /* color variations */
+  --black: #2c3e50;
+  --black-100: #5e6b79;
+  --black-300: #43515f;
+  --black-500: #2c3e50;
+  --black-700: #33404d;
+  --black-900: #222930;
+
+  --blue: #3498db;
+  --blue-100: #90cbf3;
+  --blue-300: #5db1e9;
+  --blue-500: #3498db;
+  --blue-700: #1e84c9;
+  --blue-900: #0a6bac;
+
+  --gray: #7f8c8d;
+  --gray-100: #cfcfcf;
+  --gray-300: #b3b3b3;
+  --gray-500: #7f8c8d;
+  --gray-700: #727272;
+  --gray-900: #535353;
+
+  --green: #2ecc71;
+  --green-100: #65faa3;
+  --green-300: #46e287;
+  --green-500: #2ecc71;
+  --green-700: #19b85b;
+  --green-900: #06a046;
+
+  --purple: #8e44ad;
+  --purple-100: #cc7cee;
+  --purple-300: #af64cf;
+  --purple-500: #8e44ad;
+  --purple-700: #762a97;
+  --purple-900: #5c1879;
+
+  --red: #e74c3c;
+  --red-100: #ff8274;
+  --red-300: #f16b5c;
+  --red-500: #e74c3c;
+  --red-700: #d63422;
+  --red-900: #be200f;
+
+  --white: #eeeeee;
+  --white-100: #fafafa;
+  --white-300: #f3f3f3;
+  --white-500: #eeeeee;
+  --white-700: #e4e4e4;
+  --white-900: #dddddd;
+
+  --yellow: #f1c40f;
+  --yellow-100: #ecd36f;
+  --yellow-300: #f1cf47;
+  --yellow-500: #f1c40f;
+  --yellow-700: #dbb107;
+  --yellow-900: #c59e00;
+}
+
 body {
   background-color: aliceblue;
   margin: 0px;
@@ -17,41 +97,41 @@ body {
   0% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 20%,
-      #8e7dff 60%,
-      #00bacf 100%
+      var(--primary) 20%,
+      var(--median) 60%,
+      var(--secondary) 100%
     );
   }
   25% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 15%,
-      #8e7dff 55%,
-      #00bacf 95%
+      var(--primary) 15%,
+      var(--median) 55%,
+      var(--secondary) 95%
     );
   }
   50% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 10%,
-      #8e7dff 50%,
-      #00bacf 90%
+      var(--primary) 10%,
+      var(--median) 50%,
+      var(--secondary) 90%
     );
   }
   75% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 5%,
-      #8e7dff 45%,
-      #00bacf 85%
+      var(--primary) 5%,
+      var(--median) 45%,
+      var(--secondary) 85%
     );
   }
   100% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 0%,
-      #8e7dff 40%,
-      #00bacf 80%
+      var(--primary) 0%,
+      var(--median) 40%,
+      var(--secondary) 80%
     );
   }
 }
@@ -59,41 +139,41 @@ body {
   0% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 20%,
-      #8e7dff 60%,
-      #00bacf 100%
+      var(--primary) 20%,
+      var(--median) 60%,
+      var(--secondary) 100%
     );
   }
   25% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 15%,
-      #8e7dff 55%,
-      #00bacf 95%
+      var(--primary) 15%,
+      var(--median) 55%,
+      var(--secondary) 95%
     );
   }
   50% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 10%,
-      #8e7dff 50%,
-      #00bacf 90%
+      var(--primary) 10%,
+      var(--median) 50%,
+      var(--secondary) 90%
     );
   }
   75% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 5%,
-      #8e7dff 45%,
-      #00bacf 85%
+      var(--primary) 5%,
+      var(--median) 45%,
+      var(--secondary) 85%
     );
   }
   100% {
     background: linear-gradient(
       to top right,
-      #bc5bcf 0%,
-      #8e7dff 40%,
-      #00bacf 80%
+      var(--primary) 0%,
+      var(--median) 40%,
+      var(--secondary) 80%
     );
   }
 }
@@ -294,6 +374,10 @@ a:active {
   margin: 0.25rem;
 }
 
+.section .row {
+  justify-content: space-around;
+}
+
 .row {
   /* padding: 5px; */
 
@@ -302,8 +386,11 @@ a:active {
   flex-wrap: wrap;
 }
 
-.section .row {
-  justify-content: space-around;
+.row.section-heading {
+  border: 5px solid var(--primary);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin: 1rem;
 }
 
 .column {
@@ -503,6 +590,34 @@ pad-rl-25 {
 
 .center {
   text-align: center;
+}
+
+/* color palette array */
+.color-palette-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+
+  gap: 1rem 1rem;
+}
+
+.color-palette-container .color-palette {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.color-palette-shade {
+  padding: 15px 10px;
+  margin: 5px 0px;
+  font-size: 0.9rem;
+  color: var(--white);
+
+  text-align: center;
+}
+
+.color-palette-shade:hover {
+  color: var(--black);
 }
 
 /* MEDIA QUERIES */
