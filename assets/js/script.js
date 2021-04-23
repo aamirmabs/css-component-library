@@ -60,7 +60,20 @@ const hanburgerMenuController = (e) => {
 
 hamburgerMenuButton.onclick = hanburgerMenuController;
 
-// component menu accordion functionality
+// function to add event to an HTML Collection
+// HTML collections are not iterable
+// so if we need to add an event to a collection then we will convert them into an array so that we can traverse over then and add the event to each of the HTML nodes
+let addEventToHTMLCollection = (event, eventType, collection) => {
+  let array = Array.from(collection);
+
+  array.forEach((element) => {
+    element.addEventListener(eventType, event);
+  });
+};
+
+// START component menu accordion functionality
+
+// event to toggle visibility of a sub-menu items on clicking menu item
 const toggleSubMenuItems = (e) => {
   let menuTitle = e.target;
   let subMenuItems = menuTitle.nextElementSibling;
@@ -68,12 +81,31 @@ const toggleSubMenuItems = (e) => {
   subMenuItems.classList.toggle("hidden");
 };
 
-// Array.from() is used as HTML collection value returned by document.getElementsByClassName() is not iterable
-let subMenuItemArray = Array.from(
-  document.getElementsByClassName("desktop-main-menu-item")
+// adding the event to all menu items
+let menuItemCollection = document.getElementsByClassName(
+  "desktop-main-menu-item"
 );
-console.log(subMenuItemArray);
 
-subMenuItemArray.forEach((element) => {
-  element.addEventListener("click", toggleSubMenuItems);
-});
+addEventToHTMLCollection(toggleSubMenuItems, "click", menuItemCollection);
+// END component menu accordion functionality
+
+// START hide alert on clicking close button
+// collection
+let alertButtonCollection = document.getElementsByClassName(
+  "alert-close-button"
+);
+
+// event
+let hideAlertOnClick = (e) => {
+  console.log("Close clicked");
+  let element = e.target.parentNode;
+  console.log(element);
+
+  element.className = "puff-out";
+  setTimeout(() => {
+    element.style.display = "none";
+  }, 1000);
+};
+
+// adding event to collection
+addEventToHTMLCollection(hideAlertOnClick, "click", alertButtonCollection);
