@@ -99,8 +99,6 @@ let alertButtonCollection = document.getElementsByClassName(
 let hideAlertOnClick = (e) => {
   console.log("Close clicked");
   let element = e.target.parentNode;
-  console.log(element);
-
   element.className = "puff-out";
   setTimeout(() => {
     element.style.display = "none";
@@ -109,3 +107,4 @@ let hideAlertOnClick = (e) => {
 
 // adding event to collection
 addEventToHTMLCollection(hideAlertOnClick, "click", alertButtonCollection);
+// END hide alert on clicking close button
