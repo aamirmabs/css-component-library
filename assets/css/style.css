@@ -937,6 +937,7 @@ ol.list-ordered {
   border-radius: 20px;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   color: var(--gray-900);
@@ -1043,6 +1044,70 @@ ol.list-ordered {
 
 .btn-900 {
   font-size: 1.5rem;
+}
+
+/* Cards */
+.card {
+  padding: 0.5rem;
+  border: 0.25rem solid var(--primary-dark);
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card-vertical {
+  flex-direction: column;
+}
+
+.card-horizontal {
+  flex-direction: row;
+}
+
+.card .card-image {
+  width: 100%;
+}
+
+.card-details {
+  font: inherit;
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-horizontal .card-details {
+  font: inherit;
+  padding: 1rem;
+}
+
+.card-details .card-title {
+  color: var(--black-900);
+}
+
+.card-details .card-subtitle {
+  color: var(--black-500);
+}
+
+/* TODO: .card-body is not growing to occupy the height of container and pushing buttons down */
+.card-details .card-body {
+  color: var(--black-700);
+  padding-top: 0.25rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: auto;
+  flex-grow: 1;
+}
+
+.card-details .card-button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 32%));
+  grid-template-rows: repeat(auto-fill, minmax(auto-fill, auto));
+  gap: 5px 5px;
+  margin: auto;
 }
 
 /* padding classes */
