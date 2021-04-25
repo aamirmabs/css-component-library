@@ -1110,6 +1110,23 @@ ol.list-ordered {
   margin: auto;
 }
 
+/* carousel */
+.carousel {
+  font: inherit;
+  position: relative;
+}
+
+.carousel .slide {
+  display: none;
+  /* position: absolute; */
+  top: 0px;
+  left: 0px;
+}
+
+.slide img {
+  width: 100%;
+}
+
 /* padding classes */
 
 pad-5 {

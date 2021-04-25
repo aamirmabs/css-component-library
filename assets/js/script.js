@@ -108,3 +108,63 @@ let hideAlertOnClick = (e) => {
 // adding event to collection
 addEventToHTMLCollection(hideAlertOnClick, "click", alertButtonCollection);
 // END hide alert on clicking close button
+
+// START carousel //
+
+// carouselCollection will contain a collection of all carousels on the page
+let carouselArray = Array.from(document.getElementsByClassName("carousel"));
+console.log(carouselArray);
+
+// loop over each carousel in the carouselCollection and create a slideshow
+carouselArray.forEach((carousel) => {
+  let slides = Array.from(carousel.children);
+  console.log("121", slides);
+
+  // copy paste outside
+  let index = 0;
+  let counter = 0;
+
+  setInterval(() => {
+    // hide current index slide
+    slides[index].style.display = "none";
+
+    // target next slide
+    index = index + 1;
+    // check if index is a boundary value and reset
+    if (index === -1 || index === slides.length) {
+      index = 0;
+    }
+
+    counter++;
+    console.log(index, counter, slides[index]);
+
+    slides[index].style.display = "block";
+  }, 2500);
+  // copy paste outside
+
+  // let startSlideshow = (e) => {
+  //   console.log("Slideshow event attached");
+  //   let index = -1;
+  //   let counter = -1;
+
+  //   setInterval(() => {
+  //     // hide current index slide
+  //     slides[index].style.display = "none";
+
+  //     // target next slide
+  //     index = index + 1;
+  //     // check if index is a boundary value and reset
+  //     if (index === -1 || index === slides.length) {
+  //       index = 0;
+  //     }
+
+  //     counter++;
+  //     console.log(index, counter, slides[index]);
+
+  //     slides[index].style.display = "block";
+  //   }, 500);
+  // };
+
+  // carousel.addEventListener("click", startSlideshow);
+});
+// END carousel //
