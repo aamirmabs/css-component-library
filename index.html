@@ -1022,28 +1022,58 @@
               <h2>Specimen</h2>
               <div class="alert">
                 <span>This is a default alert.</span>
-                <button class="alert-close-button">X</button>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
               </div>
 
               <div class="alert alert-primary">
                 <span>This is a primary alert.</span>
-                <button class="alert-close-button">X</button>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
               </div>
 
               <div class="alert alert-secondary">
                 <span>This is a secondary alert.</span>
 
-                <button class="alert-close-button">X</button>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
               </div>
 
               <div class="alert alert-warning">
                 <span>This is a warning alert.</span>
-                <button class="alert-close-button">X</button>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
               </div>
 
               <div class="alert alert-danger">
                 <span>This is a danger alert.</span>
-                <button class="alert-close-button">X</button>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
               </div>
             </div>
             <div class="column column-3">
@@ -1663,14 +1693,295 @@
             <div class="column column-2">
               <h2>Code</h2>
               <pre><code class="language-html">
-                &lt;p&gt;
-                  Lorem ipsum dolor... tenetur optio!
-                &lt;/p&gt;
+                &lt;div class="carousel"&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/f8b4f8/333333.jpg"
+                      alt="slide 1"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/b4f8c9/333333.jpg"
+                      alt="slide 2"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/d89090/333333.jpg"
+                      alt="slide 3"
+                    /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
               </code></pre>
             </div>
           </div>
         </div>
         <!-- End CAROUSEL -->
+
+        <!-- Start TOASTS -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 class="section-title">Toasts</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h3 class="section-title">Simple Toast</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="toast fade-in">
+                <div class="toast-menu">
+                  <div class="toast-menu-left">
+                    <div class="toast-title">This is a sample toast...</div>
+                  </div>
+                  <div class="toast-menu-right">
+                    <div class="toast-time">5 mins ago</div>
+                    <div class="toast-close-button">
+                      <button class="btn btn-300">
+                        <img
+                          src="./assets/icons/close.png"
+                          alt="close-icon"
+                          class="close-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="toast-body">
+                  <div class="toast-body-content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <div class="toast-body-buttons">
+                    <button class="btn btn-primary btn-500">Click This</button>
+                    <button class="btn btn-primary btn-500">Or This</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="toast fade-in show-toast"&gt;
+                  &lt;div class="toast-menu"&gt;
+                    &lt;div class="toast-menu-left"&gt;
+                      &lt;div class="toast-title"&gt;This is a sample toast...&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="toast-menu-right"&gt;
+                      &lt;div class="toast-time"&gt;5 mins ago&lt;/div&gt;
+                      &lt;div class="toast-close-button"&gt;
+                        &lt;button class="btn btn-300"&gt;
+                          &lt;img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          /&gt;
+                        &lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="toast-body"&gt;
+                    &lt;div class="toast-body-content"&gt;
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    &lt;/div&gt;
+                    &lt;div class="toast-body-buttons"&gt;
+                      &lt;button class="btn btn-primary btn-500"&gt;Click This&lt;/button&gt;
+                      &lt;button class="btn btn-primary btn-500"&gt;Or This&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <!-- toast container -->
+          <div class="row">
+            <div class="column column-5">
+              <h3 class="section-title">Toast Container</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="toast-container">
+                <div class="toast fade-in">
+                  <div class="toast-menu">
+                    <div class="toast-menu-left">
+                      <div class="toast-title">This is a sample toast...</div>
+                    </div>
+                    <div class="toast-menu-right">
+                      <div class="toast-time">5 mins ago</div>
+                      <div class="toast-close-button">
+                        <button class="btn btn-300">
+                          <img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast-body">
+                    <div class="toast-body-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <div class="toast-body-buttons">
+                      <button class="btn btn-primary btn-500">
+                        Click This
+                      </button>
+                      <button class="btn btn-primary btn-500">Or This</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="toast fade-in">
+                  <div class="toast-menu">
+                    <div class="toast-menu-left">
+                      <div class="toast-title">This is a sample toast...</div>
+                    </div>
+                    <div class="toast-menu-right">
+                      <div class="toast-time">5 mins ago</div>
+                      <div class="toast-close-button">
+                        <button class="btn btn-300">
+                          <img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast-body">
+                    <div class="toast-body-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <div class="toast-body-buttons">
+                      <button class="btn btn-primary btn-500">
+                        Click This
+                      </button>
+                      <button class="btn btn-primary btn-500">Or This</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="toast-container"&gt;
+                  &lt;div class="toast fade-in"&gt;
+                    &lt;!-- HTML for Toast 1 --&gt;
+                  &lt;/div&gt;
+                  &lt;div class="toast fade-in"&gt;
+                    &lt;!-- HTML for Toast 2 --&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <!-- live toast  -->
+          <div class="row">
+            <div class="column column-5">
+              <h3 class="section-title">Live Toasts</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <button class="btn btn-primary" id="show-live-toasts">
+                Show Live Toasts
+              </button>
+              <div id="live-toasts-container-id" class="live-toasts">
+                <div class="toast-container">
+                  <div class="toast fade-in">
+                    <div class="toast-menu">
+                      <div class="toast-menu-left">
+                        <div class="toast-title">This is a sample toast...</div>
+                      </div>
+                      <div class="toast-menu-right">
+                        <div class="toast-time">5 mins ago</div>
+                        <div class="toast-close-button">
+                          <button class="btn btn-300">
+                            <img
+                              src="./assets/icons/close.png"
+                              alt="close-icon"
+                              class="close-icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="toast-body">
+                      <div class="toast-body-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                      </div>
+                      <div class="toast-body-buttons">
+                        <button class="btn btn-primary btn-500">
+                          Click This
+                        </button>
+                        <button class="btn btn-primary btn-500">Or This</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast fade-in">
+                    <div class="toast-menu">
+                      <div class="toast-menu-left">
+                        <div class="toast-title">This is a sample toast...</div>
+                      </div>
+                      <div class="toast-menu-right">
+                        <div class="toast-time">5 mins ago</div>
+                        <div class="toast-close-button">
+                          <button class="btn btn-300">
+                            <img
+                              src="./assets/icons/close.png"
+                              alt="close-icon"
+                              class="close-icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="toast-body">
+                      <div class="toast-body-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                      </div>
+                      <div class="toast-body-buttons">
+                        <button class="btn btn-primary btn-500">
+                          Click This
+                        </button>
+                        <button class="btn btn-primary btn-500">Or This</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div id="live-toasts-container-id" class="live-toasts"&gt;
+                  &lt;div class="toast-container"&gt;
+                    &lt;div class="toast fade-in"&gt;
+                      &lt;!-- HTML for Toast 1 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class="toast fade-in"&gt;
+                      &lt;!-- HTML for Toast 2 --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End TEMPLATE -->
 
         <!-- Start TEMPLATE -->
         <div class="section">

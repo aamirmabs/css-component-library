@@ -98,7 +98,10 @@ let alertButtonCollection = document.getElementsByClassName(
 // event
 let hideAlertOnClick = (e) => {
   console.log("Close clicked");
-  let element = e.target.parentNode;
+  let element = e.target;
+  while (!element.classList.contains("alert")) {
+    element = element.parentNode;
+  }
   element.className = "puff-out";
   setTimeout(() => {
     element.style.display = "none";
@@ -113,19 +116,13 @@ addEventToHTMLCollection(hideAlertOnClick, "click", alertButtonCollection);
 
 // carouselCollection will contain a collection of all carousels on the page
 let carouselArray = Array.from(document.getElementsByClassName("carousel"));
-console.log(carouselArray);
 
 // loop over each carousel in the carouselCollection and create a slideshow
 carouselArray.forEach((carousel) => {
   let slides = Array.from(carousel.children);
-  console.log("121", slides);
-
-  // copy paste outside
   let index = 0;
-  let counter = 0;
 
   setInterval(() => {
-    // hide current index slide
     slides[index].style.display = "none";
 
     // target next slide
@@ -134,37 +131,61 @@ carouselArray.forEach((carousel) => {
     if (index === -1 || index === slides.length) {
       index = 0;
     }
-
-    counter++;
-    console.log(index, counter, slides[index]);
-
     slides[index].style.display = "block";
   }, 2500);
-  // copy paste outside
-
-  // let startSlideshow = (e) => {
-  //   console.log("Slideshow event attached");
-  //   let index = -1;
-  //   let counter = -1;
-
-  //   setInterval(() => {
-  //     // hide current index slide
-  //     slides[index].style.display = "none";
-
-  //     // target next slide
-  //     index = index + 1;
-  //     // check if index is a boundary value and reset
-  //     if (index === -1 || index === slides.length) {
-  //       index = 0;
-  //     }
-
-  //     counter++;
-  //     console.log(index, counter, slides[index]);
-
-  //     slides[index].style.display = "block";
-  //   }, 500);
-  // };
-
-  // carousel.addEventListener("click", startSlideshow);
 });
 // END carousel //
+
+// START toasts //
+// hide toast on clicking close button on toast
+let closeToastButtonsArray = Array.from(
+  document.getElementsByClassName("toast-close-button")
+);
+
+let hideToastOnClose = (e) => {
+  // event could be triggered on close icon or on button
+  // we will traverse parent elements till we reach the toast
+  let toast = e.target;
+  while (!toast.classList.contains("toast")) {
+    toast = toast.parentNode;
+  }
+
+  toast.classList.remove("fade-in");
+  toast.classList.add("fade-out");
+
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 1000);
+};
+
+closeToastButtonsArray.forEach((closeButton) => {
+  closeButton.addEventListener("click", hideToastOnClose);
+});
+
+// show live toasts on clicking button
+let showLiveToastButton = document.getElementById("show-live-toasts");
+
+let showLiveToasts = (e) => {
+  let liveToastContainer = document.getElementById("live-toasts-container-id");
+
+  // show the live toasts container
+  liveToastContainer.style.display = "block";
+  liveToastContainer.classList.add("fade-in");
+
+  // fade out toast container after 3 seconds
+  const fadeoutDuration = 5000;
+  setTimeout(() => {
+    liveToastContainer.classList.remove("fade-in");
+    liveToastContainer.classList.add("fade-out");
+  }, fadeoutDuration);
+
+  // hide toasts container after 1 more second
+  setTimeout(() => {
+    liveToastContainer.classList.remove("fade-out");
+    liveToastContainer.style.display = "none";
+  }, fadeoutDuration + 1000);
+};
+
+showLiveToastButton.addEventListener("click", showLiveToasts);
+
+// END toasts //
