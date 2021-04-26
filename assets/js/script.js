@@ -72,13 +72,41 @@ let addEventToHTMLCollection = (event, eventType, collection) => {
 };
 
 // START component menu accordion functionality
-
+// TODO: Adding links to main menu disabled the accordion functionality clicks - figure a workaround, maybe use a close/open arrow in menu
 // event to toggle visibility of a sub-menu items on clicking menu item
 const toggleSubMenuItems = (e) => {
-  let menuTitle = e.target;
-  let subMenuItems = menuTitle.nextElementSibling;
+  // toggle targeted sub-menu
+  let targetMenuTitle = e.target;
+  let subMenuItems = targetMenuTitle.nextElementSibling;
 
-  subMenuItems.classList.toggle("hidden");
+  if (subMenuItems.classList.contains("hidden")) {
+    subMenuItems.classList.remove("hidden");
+    subMenuItems.classList.remove("track-out");
+    subMenuItems.classList.add("track-in");
+  } else {
+    subMenuItems.classList.remove("track-in");
+    subMenuItems.classList.add("track-out");
+    setTimeout(() => {
+      subMenuItems.classList.add("hidden");
+    }, 900);
+  }
+
+  // close every other open sub-menu
+  let allMenuTitles = Array.from(
+    document.getElementsByClassName("desktop-main-menu-item")
+  );
+
+  allMenuTitles.forEach((currentMenuTitle) => {
+    let currentSubMenuItem = currentMenuTitle.nextElementSibling;
+
+    if (currentSubMenuItem != targetMenuTitle) {
+      subMenuItems.classList.remove("track-in");
+      subMenuItems.classList.add("track-out");
+      setTimeout(() => {
+        subMenuItems.classList.add("hidden");
+      }, 900);
+    }
+  });
 };
 
 // adding the event to all menu items
@@ -87,6 +115,10 @@ let menuItemCollection = document.getElementsByClassName(
 );
 
 addEventToHTMLCollection(toggleSubMenuItems, "click", menuItemCollection);
+
+// event to close all other open sub menus on click
+const open;
+
 // END component menu accordion functionality
 
 // START hide alert on clicking close button
@@ -187,5 +219,4 @@ let showLiveToasts = (e) => {
 };
 
 showLiveToastButton.addEventListener("click", showLiveToasts);
-
 // END toasts //
