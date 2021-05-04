@@ -117,7 +117,7 @@ let menuItemCollection = document.getElementsByClassName(
 addEventToHTMLCollection(toggleSubMenuItems, "click", menuItemCollection);
 
 // event to close all other open sub menus on click
-const open;
+// const open;
 
 // END component menu accordion functionality
 
