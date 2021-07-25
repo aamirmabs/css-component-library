@@ -21,6 +21,12 @@
     <!-- Prism CSS for syntax highlighting -->
     <link rel="stylesheet" href="./assets/prism/prism-light.css" />
     <title>CSS Component Library</title>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/3e74c1a97c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="gradient">
     <div class="layout-controller">
@@ -33,8 +39,8 @@
         <!-- START Header/Main menu -->
         <div class="header-menu">
           <ul class="header-menu-list">
-            <li class="header-menu-list-item"><a href="#">Docs</a></li>
-            <li class="header-menu-list-item"><a href="#">Connect</a></li>
+            <!-- <li class="header-menu-list-item"><a href="#">Docs</a></li> -->
+            <li class="header-menu-list-item"><a href="#footer">Connect</a></li>
           </ul>
         </div>
         <!-- END Header/Main menu -->
@@ -284,11 +290,13 @@
             <div class="column column-5">
               <h1 class="page-title">Components + Code</h1>
               <p class="lead-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                quae autem officia atque facilis beatae ex, saepe quis corporis
-                velit inventore perferendis consequuntur reiciendis veritatis
-                id? Fugiat porro ut explicabo.
+                Easy to use responsive CSS Components. To use this stylesheet,
+                paste the following code into your webpage.
               </p>
+              <pre><code class="language-css">
+                &lt;link rel='stylesheet type='text/css' href='
+                https://css-components-library.netlify.app/assets/css/style.css'&gt;
+              </code></pre>
             </div>
           </div>
         </div>
@@ -537,6 +545,8 @@
           </div>
           <!-- End Rows + Columns -->
 
+          <hr class="topic-divider" />
+
           <!-- Start Headings -->
           <div>
             <div class="row">
@@ -569,6 +579,8 @@
           </div>
           <!-- End Headings -->
 
+          <hr class="topic-divider" />
+
           <!-- Start Leading Text -->
           <div>
             <div class="row">
@@ -599,6 +611,8 @@
             </div>
           </div>
           <!-- End Leading Text -->
+
+          <hr class="topic-divider" />
 
           <!-- Start Alignment -->
           <div>
@@ -639,6 +653,8 @@
             </div>
           </div>
           <!-- End Alignment -->
+
+          <hr class="topic-divider" />
 
           <!-- Start Lists -->
           <div>
@@ -809,6 +825,9 @@
                 </div>
               </div>
             </div>
+
+            <hr class="topic-divider" />
+
             <div class="row">
               <div class="column column-5">
                 <h3 id="colors-custom-palette" class="section-title">
@@ -1276,6 +1295,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <div class="row">
             <div class="column column-5">
               <h3 id="buttons-colors" class="section-title">
@@ -1305,6 +1326,8 @@
               </code></pre>
             </div>
           </div>
+
+          <hr class="topic-divider" />
 
           <div class="row">
             <div class="column column-5">
@@ -1374,6 +1397,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <div class="row">
             <div class="column column-5">
               <h3 id="buttons-outline" class="section-title">Outline</h3>
@@ -1404,6 +1429,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <div class="row">
             <div class="column column-5">
               <h3 id="buttons-sizes" class="section-title">Sizes</h3>
@@ -1431,6 +1458,8 @@
               </code></pre>
             </div>
           </div>
+
+          <hr class="topic-divider" />
 
           <div class="row">
             <div class="column column-5">
@@ -1584,6 +1613,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <div class="row">
             <div class="column column-5">
               <h3 id="cards-horizontal" class="section-title">
@@ -1640,6 +1671,8 @@
               </code></pre>
             </div>
           </div>
+
+          <hr class="topic-divider" />
 
           <div class="row">
             <div class="column column-5">
@@ -1937,6 +1970,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <!-- toast container -->
           <div class="row">
             <div class="column column-5">
@@ -2025,6 +2060,8 @@
               </code></pre>
             </div>
           </div>
+
+          <hr class="topic-divider" />
 
           <!-- live toast  -->
           <div class="row">
@@ -2124,7 +2161,7 @@
         </div>
         <!-- End TOASTS -->
 
-        <!-- Start TEMPLATE -->
+        <!-- Start Avatars -->
 
         <div class="section">
           <div class="row section-heading">
@@ -2183,6 +2220,8 @@
               </code></pre>
             </div>
           </div>
+
+          <hr class="topic-divider" />
 
           <div class="row">
             <div class="column column-5">
@@ -2247,6 +2286,8 @@
             </div>
           </div>
 
+          <hr class="topic-divider" />
+
           <div class="row">
             <div class="column column-5">
               <h3 id="avatars-group" class="section-title">Avatar Group</h3>
@@ -2294,7 +2335,7 @@
           </div>
         </div>
 
-        <!-- End TEMPLATE -->
+        <!-- End Avatars -->
 
         <!-- Start TEMPLATE -->
         <!--
@@ -2330,7 +2371,29 @@
       <!-- END Page Content -->
 
       <!-- START Footer -->
-      <div class="footer">Footer</div>
+      <div id="footer">
+        <div class="primary-footer">
+          <div class="section">
+            <div class="row section-heading">
+              <div class="column column-5">
+                <div class="primary-footer-content">
+                  <p>Designed by Aamir Abbas</p>
+
+                  <div class="footer-social-icons">
+                    <a href="https://twitter.com/aamyear">
+                      <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="https://github.com/aamyear">
+                      <i class="fab fa-github-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-footer">Copyright © 2021</div>
+      </div>
       <!-- END Footer -->
     </div>
   </body>
