@@ -1066,6 +1066,10 @@ a:active {
   /* background-color: rgba(216, 237, 255, 0.25); */
   background-color: var(--component-menu-desktop-background);
   grid-area: component-menu-desktop;
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1; */
 }
 
 .content {
@@ -1280,6 +1284,12 @@ a:active {
 
 .component-menu-desktop ul.desktop-main-menu-start {
   list-style: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .desktop-main-menu-start li {
