@@ -4,23 +4,2399 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1280px, initial-scale=1.0" />
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="./css/style.css" />
-=======
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/prism/prism-dark.css" />
->>>>>>> Stashed changes
-    <title>CSS Component Library</title>
-  </head>
-  <body>
-    <h1>CSS Component Library</h1>
 
-    <!-- javaScript  -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/prism/prism-dark.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Reset  -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Prism CSS for syntax highlighting -->
+    <link rel="stylesheet" href="./assets/prism/prism-light.css" />
+    <title>CSS Component Library</title>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/3e74c1a97c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="gradient">
+    <div class="layout-controller">
+      <!-- HEADER Logo + Menu -->
+      <div class="header">
+        <div class="header-logo">
+          <img src="./assets/img/potato-css-logo.png" alt="potato-css-logo" />
+        </div>
+
+        <!-- START Header/Main menu -->
+        <div class="header-menu">
+          <ul class="header-menu-list">
+            <!-- <li class="header-menu-list-item"><a href="#">Docs</a></li> -->
+            <li class="header-menu-list-item"><a href="#footer">Connect</a></li>
+          </ul>
+        </div>
+        <!-- END Header/Main menu -->
+      </div>
+
+      <!-- START Hamburger icon -->
+      <div class="component-menu-button-mobile">
+        <button id="hamburger-menu-button" aria-label="Main Menu">
+          <svg width="100%" height="100%" viewBox="0 0 100 100">
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- END Hamburger icon -->
+
+      <!-- START Mobile Menu -->
+      <div class="component-menu-mobile" id="component-menu-mobile-id">
+        <h2 class="mobile-menu-heading">MENU</h2>
+        <ul class="mobile-main-menu-start">
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#typography">Typography</a></span
+            >
+          </li>
+
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#colors">Colors</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#alerts">Alerts</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#badges">Badges</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#buttons">Buttons</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"><a href="#cards">Card</a></span>
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#carousel">Carousel</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#toasts">Toast</a></span
+            >
+          </li>
+          <li>
+            <span class="mobile-main-menu-item"
+              ><a href="#avatars">Avatars</a></span
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- END Mobile Menu -->
+
+      <!-- START Desktop Menu -->
+      <div class="component-menu-desktop">
+        <ul class="desktop-main-menu-start">
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#typography">Typography</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#typography-rows-columns">Rows + Columns</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#typography-headings">Headings</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#typography-leading-text">Leading Text</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#typography-alignment">Alignment</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#typography-lists">Lists</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#colors">Colors</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#colors-theme-palette">Theme Color Palette</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#colors-custom-palette">Custom Color Palette</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#alerts">Alerts</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#alerts-simple">Simple Alerts</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#badges">Badges</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#badges-sizes">Badge Sizes</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#badges-background">Badge Backgrounds</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#badges-pill">Pill Badges</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#buttons">Buttons</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#buttons-colors">Colors</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#buttons-outline">Outline</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#buttons-sizes">Sizes</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#buttons-disabled">Disabled</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#cards">Card</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#cards-vertical">Vertical</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#cards-horizontal">Horizontal</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#cards-groups">Card Groups</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#carousel">Carousel</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#carousel-image">Image Carousel</a>
+              </li>
+            </ul>
+          </li>
+          <!-- TODO: Add images section -->
+          <!-- <li>
+            <span class="desktop-main-menu-item"><a href="#">Images</a></span>
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#">Responsive Images</a>
+              </li>
+              <li class="desktop-sub-menu-item"><a href="#">Thumbnails</a></li>
+              <li class="desktop-sub-menu-item"><a href="#">Alignment</a></li>
+            </ul>
+          </li> -->
+          <!-- TODO: Add lists section -->
+          <!-- <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#">List Groups</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item"><a href="#"></a></li>
+            </ul>
+          </li> -->
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#toasts">Toast</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#toasts-simple">Simple Toasts</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#toasts-container">Toast Container</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#toasts-live">Live Toasts</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="desktop-main-menu-item"
+              ><a href="#avatars">Avatars</a></span
+            >
+            <ul class="desktop-sub-menu">
+              <li class="desktop-sub-menu-item">
+                <a href="#avatars-single">Single Avatar</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#avatars-sizes">Avatar Sizes</a>
+              </li>
+              <li class="desktop-sub-menu-item">
+                <a href="#avatars-group">Avatar Group</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- END Mobile Menu -->
+
+      <!-- START Page Content -->
+      <div class="content">
+        <!-- START Page Heading Section -->
+        <div class="section">
+          <div class="row">
+            <div class="column column-5">
+              <h1 class="page-title">Components + Code</h1>
+              <p class="lead-text">
+                Easy to use responsive CSS Components. To use this stylesheet,
+                paste the following code into your webpage.
+              </p>
+              <pre><code class="language-css">
+                &lt;link rel='stylesheet type='text/css' href='
+                https://css-components-library.netlify.app/assets/css/style.css'&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- START Page Heading Section -->
+
+        <!-- START TYPOGRAPHY SECTION -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column">
+              <h2 id="typography" class="section-title">TYPOGRAPHY</h2>
+            </div>
+          </div>
+
+          <!-- Start Rows + Columns -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="typography-rows-columns" class="section-title">
+                  Rows + Columns
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <h1>5 Column Width</h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Explicabo tenetur accusamus eos commodi labore deserunt
+                  dolores, veritatis quos et sunt ex praesentium autem excepturi
+                  error. Earum a nihil repudiandae illum? Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Ex perferendis accusamus
+                  harum voluptatibus odit veniam, laborum, quidem iure excepturi
+                  nam quisquam, nihil voluptatum architecto necessitatibus
+                  tempore cupiditate! Dolorem, tenetur optio!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="column column-5"&gt;
+                    &lt;h1&gt;5 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum dolor... tenetur optio!
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 + 1 Columns -->
+          <div>
+            <div class="row">
+              <div class="column column-4">
+                <h1>4 Column Width</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Animi expedita dolore explicabo laboriosam iste nobis
+                  reiciendis numquam optio libero quos cum eius voluptatem magni
+                  soluta, facilis eos tenetur blanditiis quam.
+                </p>
+              </div>
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column column-5">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="column column-4"&gt;
+                    &lt;h1&gt;4 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum ... blanditiis quam.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 + 2 Columns -->
+          <div>
+            <div class="row">
+              <div class="column column-3">
+                <h1>3 Column Width</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugiat culpa quos, quis laudantium odit nulla nemo aspernatur
+                  rem doloribus sint tempore accusantium cumque? Eligendi,
+                  debitis sint eum placeat dolorum expedita.
+                </p>
+              </div>
+              <div class="column column-2">
+                <h1>2 Column Width</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="column column-3"&gt;
+                    &lt;h1&gt;3 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum... dolorum expedita.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="column column-2"&gt;
+                    &lt;h1&gt;2 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum ... adipisicing elit.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 + 3 Columns -->
+          <div>
+            <div class="row">
+              <div class="column column-2">
+                <h1>2 Column Width</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="column column-3">
+                <h1>3 Column Width</h1>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugiat culpa quos, quis laudantium odit nulla nemo aspernatur
+                  rem doloribus sint tempore accusantium cumque? Eligendi,
+                  debitis sint eum placeat dolorum expedita.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="column column-2"&gt;
+                    &lt;h1&gt;2 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum ... adipisicing elit.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class="column column-3"&gt;
+                    &lt;h1&gt;3 Column Width&lt;/h1&gt;
+                    &lt;p&gt;
+                      Lorem ipsum ... dolorum expedita.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1 + 1 + 1 + 1 + 1 Columns -->
+          <div>
+            <div class="row">
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+
+              <div class="column column-1">
+                <h1>1 Column Width</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;div class="row"&gt;
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="column column-1"&gt;
+                    &lt;h1&gt;1 Column Width&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum ... adipisicing elit.&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- End Rows + Columns -->
+
+          <hr class="topic-divider" />
+
+          <!-- Start Headings -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="typography-headings" class="section-title">Headings</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-3">
+                <h2>Specimen</h2>
+                <h1>This is Heading 1</h1>
+                <h2>This is Heading 2</h2>
+                <h3>This is Heading 3</h3>
+                <h4>This is Heading 4</h4>
+                <h5>This is Heading 5</h5>
+                <h6>This is Heading 6</h6>
+              </div>
+              <div class="column column-2">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;h1&gt;This is Heading 1&lt;/h1&gt;
+                &lt;h2&gt;This is Heading 2&lt;/h2&gt;
+                &lt;h3&gt;This is Heading 3&lt;/h3&gt;
+                &lt;h4&gt;This is Heading 4&lt;/h4&gt;
+                &lt;h5&gt;This is Heading 5&lt;/h5&gt;
+                &lt;h6&gt;This is Heading 6&lt;/h6&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- End Headings -->
+
+          <hr class="topic-divider" />
+
+          <!-- Start Leading Text -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="typography-leading-text" class="section-title">
+                  Leading Text
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-3">
+                <h2>Specimen</h2>
+                <p class="lead-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Ipsum consequuntur magnam tenetur esse magni nisi. Nobis
+                  facere, dolore numquam fuga repudiandae tempore soluta alias
+                  accusantium iste animi perferendis at mollitia?
+                </p>
+              </div>
+              <div class="column column-2">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                &lt;p class="lead-text"&gt;
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit ... animi perferendis at mollitia?
+                &lt;/p&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- End Leading Text -->
+
+          <hr class="topic-divider" />
+
+          <!-- Start Alignment -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="typography-alignment" class="section-title">
+                  Alignment
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-2">
+                <h2>Specimen</h2>
+                <p class="left">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="right">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="column column-3">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                  &lt;p class="left"&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  &lt;/p&gt;
+                  &lt;p class="center"&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  &lt;/p&gt;
+                  &lt;p class="right"&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  &lt;/p&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- End Alignment -->
+
+          <hr class="topic-divider" />
+
+          <!-- Start Lists -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="typography-lists" class="section-title">Lists</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-2">
+                <h2>Specimen</h2>
+                <h3>Unordered List</h3>
+                <ul class="list-unordered">
+                  <li class="list-item">Item 1</li>
+                  <li class="list-item">Item 2</li>
+                  <li class="list-item">Item 3</li>
+                </ul>
+                <h3>Ordered List</h3>
+                <ol class="list-ordered">
+                  <li class="list-item">Item 1</li>
+                  <li class="list-item">Item 2</li>
+                  <li class="list-item">Item 3</li>
+                </ol>
+              </div>
+              <div class="column column-3">
+                <h2>Code</h2>
+                <pre><code class="language-html">
+                  &lt;h3&gt;Unordered List&lt;/h3&gt;
+                  &lt;ul class="list-unordered"&gt;
+                    &lt;li class="list-item"&gt;Item 1&lt;/li&gt;
+                    &lt;li class="list-item"&gt;Item 2&lt;/li&gt;
+                    &lt;li class="list-item"&gt;Item 3&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;h3&gt;Ordered List&lt;/h3&gt;
+                  &lt;ol class="list-ordered"&gt;
+                    &lt;li class="list-item"&gt;Item 1&lt;/li&gt;
+                    &lt;li class="list-item"&gt;Item 2&lt;/li&gt;
+                    &lt;li class="list-item"&gt;Item 3&lt;/li&gt;
+                  &lt;/ol&gt;
+              </code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- End Lists -->
+        </div>
+        <!-- END TYPOGRAPHY SECTION -->
+
+        <!-- START COLOURS SECTION -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column">
+              <h2 id="colors" class="section-title">Colors</h2>
+            </div>
+          </div>
+
+          <!-- Start Color Palette -->
+          <div>
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="colors-theme-palette" class="section-title">
+                  Theme Color Palette
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <div class="color-palette-container">
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--primary)"
+                    >
+                      --primary-light
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--primary)"
+                    >
+                      --primary
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--primary)"
+                    >
+                      --primary-dark
+                    </div>
+                  </div>
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--median)"
+                    >
+                      --median-light
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--median)"
+                    >
+                      --median
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--median)"
+                    >
+                      --median-dark
+                    </div>
+                  </div>
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--secondary)"
+                    >
+                      --secondary-light
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--secondary)"
+                    >
+                      --secondary
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--secondary)"
+                    >
+                      --secondary-dark
+                    </div>
+                  </div>
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--warning)"
+                    >
+                      --warning-light
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--warning)"
+                    >
+                      --warning
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--warning)"
+                    >
+                      --warning-dark
+                    </div>
+                  </div>
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--danger)"
+                    >
+                      --danger-light
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--danger)"
+                    >
+                      --danger
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--danger)"
+                    >
+                      --danger-dark
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="topic-divider" />
+
+            <div class="row">
+              <div class="column column-5">
+                <h3 id="colors-custom-palette" class="section-title">
+                  Custom Color Palette
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column column-5">
+                <div class="color-palette-container">
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black)"
+                    >
+                      --black
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--black-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue)"
+                    >
+                      --blue
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--blue-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray)"
+                    >
+                      --gray
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--gray-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green)"
+                    >
+                      --green
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--green-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple)"
+                    >
+                      --purple
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--purple-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red)"
+                    >
+                      --red
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--red-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white)"
+                    >
+                      --white
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--white-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+
+                  <div class="color-palette">
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow)"
+                    >
+                      --yellow
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow-100)"
+                    >
+                      100
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow-300)"
+                    >
+                      300
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow-500)"
+                    >
+                      500
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow-700)"
+                    >
+                      700
+                    </div>
+                    <div
+                      class="color-palette-shade"
+                      style="background-color: var(--yellow-900)"
+                    >
+                      900
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Color Palette -->
+        </div>
+        <!-- END COLOURS SECTION -->
+
+        <!-- Start Alerts Section -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="alerts" class="section-title">Alerts</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="alerts-simple" class="section-title">Simple Alerts</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="alert">
+                <span>This is a default alert.</span>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
+              </div>
+
+              <div class="alert alert-primary">
+                <span>This is a primary alert.</span>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
+              </div>
+
+              <div class="alert alert-secondary">
+                <span>This is a secondary alert.</span>
+
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
+              </div>
+
+              <div class="alert alert-warning">
+                <span>This is a warning alert.</span>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
+              </div>
+
+              <div class="alert alert-danger">
+                <span>This is a danger alert.</span>
+                <button class="alert-close-button">
+                  <img
+                    src="./assets/icons/close.png"
+                    alt="close-icon"
+                    class="close-icon"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="alert"&gt;
+                  &lt;span&gt;This is a default alert.&lt;/span&gt;
+                  &lt;button class="alert-close-button"&gt;X&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="alert alert-primary"&gt;
+                  &lt;span&gt;This is a primary alert.&lt;/span&gt;
+                  &lt;button class="alert-close-button"&gt;X&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="alert alert-secondary"&gt;
+                  &lt;span&gt;This is a secondary alert.&lt;/span&gt;
+                  &lt;button class="alert-close-button"&gt;X&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="alert alert-warning"&gt;
+                  &lt;span&gt;This is a warning alert.&lt;/span&gt;
+                  &lt;button class="alert-close-button"&gt;X&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="alert alert-danger"&gt;
+                  &lt;span&gt;This is a danger alert.&lt;/span&gt;
+                  &lt;button class="alert-close-button"&gt;X&lt;/button&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End Alerts Section -->
+
+        <!-- Start Badges -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="badges" class="section-title">Badges</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="badges-sizes" class="section-title">Badge Sizes</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <h1>Heading 1 <span class="badge">Badge</span></h1>
+              <h2>Heading 2 <span class="badge">Badge</span></h2>
+              <h3>Heading 3 <span class="badge">Badge</span></h3>
+              <h4>Heading 4 <span class="badge">Badge</span></h4>
+              <h5>Heading 5 <span class="badge">Badge</span></h5>
+              <h6>Heading 6 <span class="badge">Badge</span></h6>
+              <p>Paragraph <span class="badge">Badge</span></p>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;h1&gt;Heading 1 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h1&gt;
+                &lt;h2&gt;Heading 2 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h2&gt;
+                &lt;h3&gt;Heading 3 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h3&gt;
+                &lt;h4&gt;Heading 4 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h4&gt;
+                &lt;h5&gt;Heading 5 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h5&gt;
+                &lt;h6&gt;Heading 6 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/h6&gt;
+                &lt;p&gt;Heading 6 &lt;span class="badge"&gt;Badge&lt;/span&gt;&lt;/p&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="buttons-colors" class="section-title">
+                Badge Backgrounds
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <span class="badge badge-primary">primary</span>
+                <span class="badge badge-secondary">secondary</span>
+                <span class="badge badge-warning">warning</span>
+                <span class="badge badge-danger">danger</span>
+                <span class="badge badge-success">success</span>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;span class="badge badge-primary"&gt;primary&lt;/span&gt;
+                &lt;span class="badge badge-secondary"&gt;secondary&lt;/span&gt;
+                &lt;span class="badge badge-warning"&gt;warning&lt;/span&gt;
+                &lt;span class="badge badge-danger"&gt;danger&lt;/span&gt;
+                &lt;span class="badge badge-success"&gt;success&lt;/span&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="badges-pill" class="section-title">Pill Badge</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <span class="badge badge-primary badge-pill">primary</span>
+                <span class="badge badge-secondary badge-pill">secondary</span>
+                <span class="badge badge-warning badge-pill">warning</span>
+                <span class="badge badge-danger badge-pill">danger</span>
+                <span class="badge badge-success badge-pill">success</span>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;span class="badge badge-primary badge-pill"&gt;primary&lt;/span&gt;
+                &lt;span class="badge badge-secondary badge-pill"&gt;secondary&lt;/span&gt;
+                &lt;span class="badge badge-warning badge-pill"&gt;warning&lt;/span&gt;
+                &lt;span class="badge badge-danger badge-pill"&gt;danger&lt;/span&gt;
+                &lt;span class="badge badge-success badge-pill"&gt;success&lt;/span&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End Badges -->
+
+        <!-- Start BUTTONS -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="buttons" class="section-title">Buttons</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="buttons-colors" class="section-title">Colors</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <button class="btn">Default</button>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-success">Success</button>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;button class="btn"&gt;Default&lt;/button&gt;
+                &lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+                &lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+                &lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+                &lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+                &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="buttons-outline" class="section-title">Outline</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <button class="btn btn-outline">Default</button>
+                <button class="btn btn-primary btn-outline">Primary</button>
+                <button class="btn btn-secondary btn-outline">Secondary</button>
+                <button class="btn btn-warning btn-outline">Warning</button>
+                <button class="btn btn-danger btn-outline">Danger</button>
+                <button class="btn btn-success btn-outline">Success</button>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;button class="btn btn-outline"&gt;Default&lt;/button&gt;
+                &lt;button class="btn btn-primary btn-outline"&gt;Primary&lt;/button&gt;
+                &lt;button class="btn btn-secondary btn-outline"&gt;Secondary&lt;/button&gt;
+                &lt;button class="btn btn-warning btn-outline"&gt;Warning&lt;/button&gt;
+                &lt;button class="btn btn-danger btn-outline"&gt;Danger&lt;/button&gt;
+                &lt;button class="btn btn-success btn-outline"&gt;Success&lt;/button&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="buttons-sizes" class="section-title">Sizes</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <button class="btn btn-100">Extra Small</button>
+                <button class="btn btn-300">Small</button>
+                <button class="btn btn-500">Normal</button>
+                <button class="btn btn-700">Large</button>
+                <button class="btn btn-900">Extra Large</button>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;button class="btn btn-100"&gt;Extra Small&lt;/button&gt;
+                &lt;button class="btn btn-300"&gt;Small&lt;/button&gt;
+                &lt;button class="btn btn-500"&gt;Normal&lt;/button&gt;
+                &lt;button class="btn btn-700"&gt;Large&lt;/button&gt;
+                &lt;button class="btn btn-900"&gt;Extra Large&lt;/button&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="buttons-disabled" class="section-title">
+                Disabled Buttons
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="disabled-btn-row">
+                <button class="btn btn-outline">Default</button>
+                <button class="btn btn-outline" disabled>Disabled</button>
+              </div>
+              <div class="disabled-btn-row">
+                <button class="btn btn-primary btn-outline">Primary</button>
+                <button class="btn btn-primary btn-outline" disabled>
+                  Disabled
+                </button>
+              </div>
+              <div class="disabled-btn-row">
+                <button class="btn btn-secondary btn-outline">Secondary</button>
+                <button class="btn btn-secondary btn-outline" disabled>
+                  Disabled
+                </button>
+              </div>
+              <div class="disabled-btn-row">
+                <button class="btn btn-warning btn-outline">Warning</button>
+                <button class="btn btn-warning btn-outline" disabled>
+                  Disabled
+                </button>
+              </div>
+              <div class="disabled-btn-row">
+                <button class="btn btn-danger btn-outline">Danger</button>
+                <button class="btn btn-danger btn-outline" disabled>
+                  Disabled
+                </button>
+              </div>
+              <div class="disabled-btn-row">
+                <button class="btn btn-success btn-outline">Success</button>
+                <button class="btn btn-success btn-outline" disabled>
+                  Disabled
+                </button>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div&gt;
+                  &lt;button class="btn btn-outline"&gt;Default&lt;/button&gt;
+                  &lt;button class="btn btn-outline" disabled&gt;Disabled&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;button class="btn btn-primary btn-outline"&gt;Primary&lt;/button&gt;
+                  &lt;button class="btn btn-primary btn-outline" disabled&gt;
+                    Disabled
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;button class="btn btn-secondary btn-outline"&gt;Secondary&lt;/button&gt;
+                  &lt;button class="btn btn-secondary btn-outline" disabled&gt;
+                    Disabled
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;button class="btn btn-warning btn-outline"&gt;Warning&lt;/button&gt;
+                  &lt;button class="btn btn-warning btn-outline" disabled&gt;
+                    Disabled
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;button class="btn btn-danger btn-outline"&gt;Danger&lt;/button&gt;
+                  &lt;button class="btn btn-danger btn-outline" disabled&gt;
+                    Disabled
+                  &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;button class="btn btn-success btn-outline"&gt;Success&lt;/button&gt;
+                  &lt;button class="btn btn-success btn-outline" disabled&gt;
+                    Disabled
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End BUTTONS -->
+
+        <!-- Start CARDS -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="cards" class="section-title">Cards</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="cards-vertical" class="section-title">Vertical Cards</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="card card-vertical">
+                <img
+                  src="https://dummyimage.com/300x300/3b003b/ffffff.jpg"
+                  alt="card image"
+                  class="card-image"
+                />
+                <div class="card-details">
+                  <h2 class="card-title">Card Title</h2>
+                  <h3 class="card-subtitle">Card Subtitle</h3>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis distinctio esse maiores, nostrum numquam voluptatibus
+                    dolorem cum odio hic.
+                  </div>
+                  <div class="card-button-group">
+                    <button class="btn btn-primary">Button 1</button>
+                    <button class="btn btn-primary">Button 2</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="card card-vertical"&gt;
+                  &lt;img
+                    src="https://dummyimage.com/300x300/3b003b/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  /&gt;
+                  &lt;div class="card-details"&gt;
+                    &lt;h2 class="card-title"&gt;Card Title&lt;/h2&gt;
+                    &lt;h3 class="card-subtitle"&gt;Card Subtitle&lt;/h3&gt;
+                    &lt;div class="card-body"&gt;
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam voluptatibus
+                      dolorem cum odio hic.
+                    &lt;/div&gt;
+                    &lt;div class="card-button-group"&gt;
+                      &lt;button class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+                      &lt;button class="btn btn-primary"&gt;Button 2&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="cards-horizontal" class="section-title">
+                Horizontal Cards
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-3">
+              <h2>Specimen</h2>
+              <div class="card card-horizontal">
+                <img
+                  src="https://dummyimage.com/300x300/3b003b/ffffff.jpg"
+                  alt="card image"
+                  class="card-image"
+                />
+                <div class="card-details">
+                  <h2 class="card-title">Card Title</h2>
+                  <h3 class="card-subtitle">Card Subtitle</h3>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis distinctio esse maiores, nostrum numquam voluptatibus
+                    dolorem cum odio hic.
+                  </div>
+                  <div class="card-button-group">
+                    <button class="btn btn-primary">Button 1</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-2">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="card card-horizontal"&gt;
+                  &lt;img
+                    src="https://dummyimage.com/300x300/3b003b/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  /&gt;
+                  &lt;div class="card-details"&gt;
+                    &lt;h2 class="card-title"&gt;Card Title&lt;/h2&gt;
+                    &lt;h3 class="card-subtitle"&gt;Card Subtitle&lt;/h3&gt;
+                    &lt;div class="card-body"&gt;
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam voluptatibus
+                      dolorem cum odio hic.
+                    &lt;/div&gt;
+                    &lt;div class="card-button-group"&gt;
+                      &lt;button class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+                      &lt;button class="btn btn-primary"&gt;Button 2&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="cards-groups" class="section-title">Card Groups</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column column-5">
+              <h2>Specimen</h2>
+
+              <div class="card-grid">
+                <div class="card card-vertical">
+                  <img
+                    src="https://dummyimage.com/300x300/bc5bcf/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  />
+                  <div class="card-details">
+                    <h2 class="card-title">Nobis distinctio</h2>
+                    <h3 class="card-subtitle">
+                      Sit amet consectetur adipisicing elit.
+                    </h3>
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam
+                      voluptatibus dolorem cum odio hic.
+                    </div>
+                    <div class="card-button-group">
+                      <button class="btn btn-primary">Button 1</button>
+                      <button class="btn btn-primary">Button 2</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-vertical">
+                  <img
+                    src="https://dummyimage.com/300x300/8e7dff/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  />
+                  <div class="card-details">
+                    <h2 class="card-title">Card Title</h2>
+                    <h3 class="card-subtitle">Card Subtitle</h3>
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam
+                      voluptatibus dolorem cum odio hic.
+                    </div>
+                    <div class="card-button-group">
+                      <button class="btn btn-primary">Button 1</button>
+                      <button class="btn btn-primary">Button 2</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-vertical">
+                  <img
+                    src="https://dummyimage.com/300x300/f39c12/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  />
+                  <div class="card-details">
+                    <h2 class="card-title">Card Title</h2>
+                    <h3 class="card-subtitle">Card Subtitle</h3>
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam
+                      voluptatibus dolorem cum odio hic.
+                    </div>
+                    <div class="card-button-group">
+                      <button class="btn btn-primary">Button 1</button>
+                      <button class="btn btn-primary">Button 2</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-vertical">
+                  <img
+                    src="https://dummyimage.com/300x300/e74c3c/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  />
+                  <div class="card-details">
+                    <h2 class="card-title">Card Title</h2>
+                    <h3 class="card-subtitle">Card Subtitle</h3>
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam
+                      voluptatibus dolorem cum odio hic.
+                    </div>
+                    <div class="card-button-group">
+                      <button class="btn btn-primary">Button 1</button>
+                      <button class="btn btn-primary">Button 2</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card-vertical">
+                  <img
+                    src="https://dummyimage.com/300x300/21cf3e/ffffff.jpg"
+                    alt="card image"
+                    class="card-image"
+                  />
+                  <div class="card-details">
+                    <h2 class="card-title">Card Title</h2>
+                    <h3 class="card-subtitle">Card Subtitle</h3>
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis distinctio esse maiores, nostrum numquam
+                      voluptatibus dolorem cum odio hic.
+                    </div>
+                    <div class="card-button-group">
+                      <button class="btn btn-primary">Button 1</button>
+                      <button class="btn btn-primary">Button 2</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="card-grid"&gt;
+                  &lt;div class="card card-vertical"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/300x300/bc5bcf/ffffff.jpg"
+                      alt="card image"
+                      class="card-image"
+                    /&gt;
+                    &lt;div class="card-details"&gt;
+                      &lt;!-- HTML FOR CARD --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="card card-vertical"&gt;
+                    &lt;img ... /&gt;
+                    &lt;div class="card-details"&gt;
+                      &lt;!-- HTML FOR CARD --&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- More HTML Cards below --&gt;
+
+                  &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End CARDS -->
+
+        <!-- Start CAROUSEL -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="carousel" class="section-title">Carousel</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="carousel-image" class="section-title">Image Carousel</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-3">
+              <h2>Specimen</h2>
+
+              <div class="carousel">
+                <div class="slide">
+                  <img
+                    src="https://dummyimage.com/1280x720/f8b4f8/333333.jpg"
+                    alt="slide 1"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="https://dummyimage.com/1280x720/b4f8c9/333333.jpg"
+                    alt="slide 2"
+                  />
+                </div>
+                <div class="slide">
+                  <img
+                    src="https://dummyimage.com/1280x720/d89090/333333.jpg"
+                    alt="slide 3"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="column column-2">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="carousel"&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/f8b4f8/333333.jpg"
+                      alt="slide 1"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/b4f8c9/333333.jpg"
+                      alt="slide 2"
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div class="slide"&gt;
+                    &lt;img
+                      src="https://dummyimage.com/1280x720/d89090/333333.jpg"
+                      alt="slide 3"
+                    /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End CAROUSEL -->
+
+        <!-- Start TOASTS -->
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="toasts" class="section-title">Toasts</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="toasts-simple" class="section-title">Simple Toast</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="toast fade-in">
+                <div class="toast-menu">
+                  <div class="toast-menu-left">
+                    <div class="toast-title">This is a sample toast...</div>
+                  </div>
+                  <div class="toast-menu-right">
+                    <div class="toast-time">5 mins ago</div>
+                    <div class="toast-close-button">
+                      <button class="btn btn-300">
+                        <img
+                          src="./assets/icons/close.png"
+                          alt="close-icon"
+                          class="close-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="toast-body">
+                  <div class="toast-body-content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <div class="toast-body-buttons">
+                    <button class="btn btn-primary btn-500">Click This</button>
+                    <button class="btn btn-primary btn-500">Or This</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="toast fade-in show-toast"&gt;
+                  &lt;div class="toast-menu"&gt;
+                    &lt;div class="toast-menu-left"&gt;
+                      &lt;div class="toast-title"&gt;This is a sample toast...&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="toast-menu-right"&gt;
+                      &lt;div class="toast-time"&gt;5 mins ago&lt;/div&gt;
+                      &lt;div class="toast-close-button"&gt;
+                        &lt;button class="btn btn-300"&gt;
+                          &lt;img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          /&gt;
+                        &lt;/button&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="toast-body"&gt;
+                    &lt;div class="toast-body-content"&gt;
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    &lt;/div&gt;
+                    &lt;div class="toast-body-buttons"&gt;
+                      &lt;button class="btn btn-primary btn-500"&gt;Click This&lt;/button&gt;
+                      &lt;button class="btn btn-primary btn-500"&gt;Or This&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <!-- toast container -->
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="toasts-container" class="section-title">
+                Toast Container
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div class="toast-container">
+                <div class="toast fade-in">
+                  <div class="toast-menu">
+                    <div class="toast-menu-left">
+                      <div class="toast-title">This is a sample toast...</div>
+                    </div>
+                    <div class="toast-menu-right">
+                      <div class="toast-time">5 mins ago</div>
+                      <div class="toast-close-button">
+                        <button class="btn btn-300">
+                          <img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast-body">
+                    <div class="toast-body-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <div class="toast-body-buttons">
+                      <button class="btn btn-primary btn-500">
+                        Click This
+                      </button>
+                      <button class="btn btn-primary btn-500">Or This</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="toast fade-in">
+                  <div class="toast-menu">
+                    <div class="toast-menu-left">
+                      <div class="toast-title">This is a sample toast...</div>
+                    </div>
+                    <div class="toast-menu-right">
+                      <div class="toast-time">5 mins ago</div>
+                      <div class="toast-close-button">
+                        <button class="btn btn-300">
+                          <img
+                            src="./assets/icons/close.png"
+                            alt="close-icon"
+                            class="close-icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast-body">
+                    <div class="toast-body-content">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <div class="toast-body-buttons">
+                      <button class="btn btn-primary btn-500">
+                        Click This
+                      </button>
+                      <button class="btn btn-primary btn-500">Or This</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div class="toast-container"&gt;
+                  &lt;div class="toast fade-in"&gt;
+                    &lt;!-- HTML for Toast 1 --&gt;
+                  &lt;/div&gt;
+                  &lt;div class="toast fade-in"&gt;
+                    &lt;!-- HTML for Toast 2 --&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <!-- live toast  -->
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="toasts-live" class="section-title">Live Toasts</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <button class="btn btn-primary" id="show-live-toasts">
+                Show Live Toasts
+              </button>
+              <div id="live-toasts-container-id" class="live-toasts">
+                <div class="toast-container">
+                  <div class="toast fade-in">
+                    <div class="toast-menu">
+                      <div class="toast-menu-left">
+                        <div class="toast-title">This is a sample toast...</div>
+                      </div>
+                      <div class="toast-menu-right">
+                        <div class="toast-time">5 mins ago</div>
+                        <div class="toast-close-button">
+                          <button class="btn btn-300">
+                            <img
+                              src="./assets/icons/close.png"
+                              alt="close-icon"
+                              class="close-icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="toast-body">
+                      <div class="toast-body-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                      </div>
+                      <div class="toast-body-buttons">
+                        <button class="btn btn-primary btn-500">
+                          Click This
+                        </button>
+                        <button class="btn btn-primary btn-500">Or This</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toast fade-in">
+                    <div class="toast-menu">
+                      <div class="toast-menu-left">
+                        <div class="toast-title">This is a sample toast...</div>
+                      </div>
+                      <div class="toast-menu-right">
+                        <div class="toast-time">5 mins ago</div>
+                        <div class="toast-close-button">
+                          <button class="btn btn-300">
+                            <img
+                              src="./assets/icons/close.png"
+                              alt="close-icon"
+                              class="close-icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="toast-body">
+                      <div class="toast-body-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                      </div>
+                      <div class="toast-body-buttons">
+                        <button class="btn btn-primary btn-500">
+                          Click This
+                        </button>
+                        <button class="btn btn-primary btn-500">Or This</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;div id="live-toasts-container-id" class="live-toasts"&gt;
+                  &lt;div class="toast-container"&gt;
+                    &lt;div class="toast fade-in"&gt;
+                      &lt;!-- HTML for Toast 1 --&gt;
+                    &lt;/div&gt;
+                    &lt;div class="toast fade-in"&gt;
+                      &lt;!-- HTML for Toast 2 --&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- End TOASTS -->
+
+        <!-- Start Avatars -->
+
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 id="avatars" class="section-title">Avatars</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="avatars-single" class="section-title">Single Avatar</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <div>
+                <img
+                  src="./assets/img/img_avatar_man.png"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="http://placebeard.it/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="http://placekitten.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="https://www.placecage.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="https://www.fillmurray.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="./assets/img/img_avatar_woman.png"
+                  alt="Avatar"
+                  class="avatar"
+                />
+              </div>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;img src="... address ..."
+                  alt="Avatar" class="avatar"
+                /&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="avatars-sizes" class="section-title">Avatar Sizes</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-3">
+              <h2>Specimen</h2>
+              <div>
+                <img
+                  src="./assets/img/img_avatar_man.png"
+                  alt="Avatar"
+                  class="avatar avatar-xs"
+                />
+                <img
+                  src="http://placebeard.it/500/500"
+                  alt="Avatar"
+                  class="avatar avatar-s"
+                />
+                <img
+                  src="http://placekitten.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="https://www.placecage.com/500/500"
+                  alt="Avatar"
+                  class="avatar avatar-l"
+                />
+                <img
+                  src="https://www.fillmurray.com/500/500"
+                  alt="Avatar"
+                  class="avatar avatar-xl"
+                />
+              </div>
+            </div>
+            <div class="column column-2">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;img
+                  src="...address..."
+                  class="avatar avatar-xs"
+                /&gt;
+                &lt;img
+                  src="...address..."
+                  class="avatar avatar-s"
+                /&gt;
+                &lt;img
+                  src="...address..."
+                  class="avatar"
+                /&gt;
+                &lt;img
+                  src="...address..."
+                  class="avatar avatar-l"
+                /&gt;
+                &lt;img
+                  src="...address..."
+                  class="avatar avatar-xl"
+                /&gt;
+              </code></pre>
+            </div>
+          </div>
+
+          <hr class="topic-divider" />
+
+          <div class="row">
+            <div class="column column-5">
+              <h3 id="avatars-group" class="section-title">Avatar Group</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-3">
+              <h2>Specimen</h2>
+              <div class="avatar-group">
+                <img
+                  src="./assets/img/img_avatar_man.png"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="http://placebeard.it/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="http://placekitten.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="https://www.placecage.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+                <img
+                  src="https://www.fillmurray.com/500/500"
+                  alt="Avatar"
+                  class="avatar"
+                />
+              </div>
+            </div>
+            <div class="column column-2">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;p&gt;
+                  Lorem ipsum dolor... tenetur optio!
+                &lt;/p&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- End Avatars -->
+
+        <!-- Start TEMPLATE -->
+        <!--
+        <div class="section">
+          <div class="row section-heading">
+            <div class="column column-5">
+              <h2 class="section-title">SECTION HEADING</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-5">
+              <h3 id=" " class="section-title">SUB-SECTION TITLE</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-2">
+              <h2>Specimen</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur...</p>
+            </div>
+            <div class="column column-3">
+              <h2>Code</h2>
+              <pre><code class="language-html">
+                &lt;p&gt;
+                  Lorem ipsum dolor... tenetur optio!
+                &lt;/p&gt;
+              </code></pre>
+            </div>
+          </div>
+        </div>
+         -->
+        <!-- End TEMPLATE -->
+      </div>
+      <!-- END Page Content -->
+
+      <!-- START Footer -->
+      <div id="footer">
+        <div class="primary-footer">
+          <div class="section">
+            <div class="row section-heading">
+              <div class="column column-5">
+                <div class="primary-footer-content">
+                  <p>Designed by Aamir Abbas</p>
+
+                  <div class="footer-social-icons">
+                    <a href="https://twitter.com/aamyear">
+                      <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="https://github.com/aamyear">
+                      <i class="fab fa-github-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secondary-footer">Copyright © 2021</div>
+      </div>
+      <!-- END Footer -->
+    </div>
   </body>
-<<<<<<< Updated upstream
-  <script src="./js/script.js"></script>
-=======
->>>>>>> Stashed changes
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/prism/prism-light.js"></script>
 </html>
